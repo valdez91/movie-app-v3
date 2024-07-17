@@ -5,8 +5,8 @@ const HomePage = () => {
     // Fake contact information
     const contactInfo = {
         address: "123 Movie Review St, Film City",
-        phone: "+1 (555) 123-4567",
-        email: "contact@mtandaoapp.com"
+        phone: "+254 (555) 123-4567",
+        email: "bmaitho@gmail.com"
     };
 
     return (

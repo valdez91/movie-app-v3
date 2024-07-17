@@ -1,5 +1,7 @@
+// src/components/ReviewPage.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './ReviewPage.css';
 
 const ReviewPage = () => {
     const { movieId } = useParams();
@@ -75,19 +77,19 @@ const ReviewPage = () => {
     };
 
     return (
-        <div>
+        <div className="review-container">
             <h1>Reviews</h1>
-            <form onSubmit={handleSubmit}>
+            <form className="review-form" onSubmit={handleSubmit}>
                 <input type="number" value={rating} onChange={(e) => setRating(e.target.value)} placeholder="Rating" required />
                 <input type="text" value={comment} onChange={(e) => setComment(e.target.value)} placeholder="Comment" required />
                 <button type="submit">Add Review</button>
             </form>
             <div>
                 {reviews.map(review => (
-                    <div key={review.id}>
+                    <div key={review.id} className="review-item">
                         <h2>Rating: {review.rating}</h2>
                         <p>{review.comment}</p>
-                        <button onClick={() => handleUpdate(review.id)}>Update Review</button>
+                        <button className="update" onClick={() => handleUpdate(review.id)}>Update Review</button>
                         <button onClick={() => handleDelete(review.id)}>Delete Review</button>
                     </div>
                 ))}

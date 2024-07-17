@@ -7,7 +7,7 @@ import MoviePage from './MoviePage';
 import MovieDetails from './MovieDetails';
 import ReviewPage from './ReviewPage';
 import ProfilePage from './ProfilePage';
-
+import AllReviewsPage from './AllReviewsPage'; // Import the new component
 
 const App = () => {
     return (
@@ -19,7 +19,7 @@ const App = () => {
                 <Route path="/movies/:movieId" component={MovieDetails} />
                 <Route path="/reviews/:movieId" component={ReviewPage} />
                 <Route path="/profile" component={ProfilePage} />
-                
+                <Route path="/reviews/all" component={AllReviewsPage} /> {/* Add the new route */}
             </Switch>
         </Router>
     );

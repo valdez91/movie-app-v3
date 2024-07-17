@@ -43,6 +43,8 @@
     height: auto;
     border-radius: 8px;
     flex-grow: 1; /* Ensure image fills available space */
+    
+    object-position:right;
 }
 
 .movie-card h2 {

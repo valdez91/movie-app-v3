@@ -16,9 +16,6 @@ const NavBar = () => {
                     <Link to="/movies">Movies</Link>
                 </li>
                 <li>
-                    <Link to="/reviews/all">All Reviews</Link> {/* New link for All Reviews */}
-                </li>
-                <li>
                     <Link to="/profile">Profile</Link>
                 </li>
             </ul>

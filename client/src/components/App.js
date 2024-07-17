@@ -6,8 +6,8 @@ import HomePage from './HomePage';
 import MoviePage from './MoviePage';
 import MovieDetails from './MovieDetails';
 import ReviewPage from './ReviewPage';
+import AllReviewsPage from './AllReviewsPage';
 import ProfilePage from './ProfilePage';
-import AllReviewsPage from './AllReviewsPage'; // Import the new component
 
 const App = () => {
     return (
@@ -18,8 +18,8 @@ const App = () => {
                 <Route exact path="/movies" component={MoviePage} />
                 <Route path="/movies/:movieId" component={MovieDetails} />
                 <Route path="/reviews/:movieId" component={ReviewPage} />
+                <Route path="/reviews/all" component={AllReviewsPage} />
                 <Route path="/profile" component={ProfilePage} />
-                <Route path="/reviews/all" component={AllReviewsPage} /> {/* Add the new route */}
             </Switch>
         </Router>
     );

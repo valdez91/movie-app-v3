@@ -1,10 +1,12 @@
 /* src/components/Login.css */
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./countdown\ GIF\ -\ Find\ &\ Share\ on\ GIPHY.gif') no-repeat center center fixed;
+    background-size: cover;
     backdrop-filter: blur(10px);
 }
 
@@ -29,6 +31,13 @@ form input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    outline: none;
+}
+
+form input::placeholder {
+    color: #666;
 }
 
 form button {
@@ -38,6 +47,10 @@ form button {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
 }
 
 form .error {
@@ -52,4 +65,9 @@ form p {
 
 form a {
     color: #007bff;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
 }

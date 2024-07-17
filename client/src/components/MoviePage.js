@@ -46,7 +46,7 @@ const MoviePage = () => {
 
     return (
         <div className="movie-page">
-            <h1>Movies</h1>
+            
             <div className="movie-grid">
                 {movieColumns.map((column, colIndex) => (
                     <div key={colIndex} className="movie-column">

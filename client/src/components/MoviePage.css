@@ -1,45 +1,75 @@
+/* MoviePage.css */
+
+.movie-page {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+}
+
 .movie-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-around; /* Adjust as needed */
 }
 
 .movie-column {
-    flex: 1;
+    width: 22%; /* Adjust column width as per your layout preference */
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 .movie-card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Card background color */
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.movie-card:hover {
+    transform: translateY(-5px); /* Example of card hover effect */
 }
 
 .movie-poster {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .movie-card h2 {
-    margin: 10px 0;
-    font-size: 1.5rem;
+    margin: 15px 0;
+    font-size: 1.8rem;
 }
 
 .movie-card p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.movie-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.movie-card button:hover {
+    background-color: #0056b3;
 }
 
 .movie-card a {
     display: block;
     margin-top: 10px;
     text-decoration: none;
-    color: #007BFF;
+    color: #007bff;
     font-weight: bold;
 }
 

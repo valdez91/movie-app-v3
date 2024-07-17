@@ -8,13 +8,28 @@ const MoviePage = () => {
     useEffect(() => {
         fetch('/api/movies/all')
             .then(response => response.json())
-            .then(data => setMovies(data))
+            .then(data => {
+                // Initialize movies with showDescription property
+                const moviesWithDescriptions = data.map(movie => ({
+                    ...movie,
+                    showDescription: false
+                }));
+                setMovies(moviesWithDescriptions);
+            })
             .catch(error => console.error('Error fetching movies:', error));
     }, []);
 
     const toggleDescription = (index) => {
-        const updatedMovies = [...movies];
-        updatedMovies[index].showDescription = !updatedMovies[index].showDescription;
+        // Create a new array with updated showDescription for the clicked movie
+        const updatedMovies = movies.map((movie, idx) => {
+            if (idx === index) {
+                return {
+                    ...movie,
+                    showDescription: !movie.showDescription
+                };
+            }
+            return movie;
+        });
         setMovies(updatedMovies);
     };
 
@@ -30,7 +45,7 @@ const MoviePage = () => {
     const movieColumns = chunkMovies(movies, 4);
 
     return (
-        <div>
+        <div className="movie-page">
             <h1>Movies</h1>
             <div className="movie-grid">
                 {movieColumns.map((column, colIndex) => (
@@ -39,9 +54,9 @@ const MoviePage = () => {
                             <div key={movie.id} className="movie-card">
                                 <img src={movie.poster_url} alt={movie.title} className="movie-poster" />
                                 <h2>{movie.title}</h2>
-                                {movie.showDescription ? <p>{movie.description}</p> : null}
+                                {movie.showDescription && <p>{movie.description}</p>}
                                 <button onClick={() => toggleDescription(index)}>
-                                    {movie.showDescription ? 'Hide Description' : 'View details'}
+                                    {movie.showDescription ? 'Hide Description' : 'View Description'}
                                 </button>
                                 <Link to={`/movies/${movie.id}`}>View Poster</Link>
                                 <Link to={`/reviews/${movie.id}`}>Review Movie</Link>

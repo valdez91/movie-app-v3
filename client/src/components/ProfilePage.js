@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+// src/components/ProfilePage.js
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const ProfilePage = () => {
-    const [user, setUser] = useState(null);
-    const { userId } = useParams();
+    const history = useHistory();
 
-    useEffect(() => {
-        // Fetch user data based on userId
-        fetch(`/api/users/${userId}`)
-            .then(response => response.json())
-            .then(data => setUser(data))
-            .catch(error => console.error('Error fetching user:', error));
-    }, [userId]);
-
-    if (!user) {
-        return <div>Loading...</div>;
-    }
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            history.push('/login'); // Redirect to login page after logout
+        } catch (error) {
+            console.error('Error signing out: ', error);
+        }
+    };
 
     return (
         <div>
-            <h1>Profile: {user.username}</h1>
-            <p>User ID: {user.id}</p>
-            {/* Additional user information can be displayed here */}
+            <h1>Profile Page</h1>
+            <button onClick={handleLogout}>Log Out</button>
         </div>
     );
 };

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -9,7 +8,7 @@ const ReviewPage = () => {
     const [comment, setComment] = useState('');
 
     useEffect(() => {
-        fetch('/api/reviews/all')
+        fetch(`/api/reviews/all`)
             .then(response => response.json())
             .then(data => setReviews(data.filter(review => review.movie_id === parseInt(movieId))))
             .catch(error => console.error('Error fetching reviews:', error));

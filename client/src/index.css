@@ -1,7 +1,13 @@
-:root {
-  --bg: #282c34;
-  --header: #fff;
-  --link: #61dafb;
-  --text: hsla(0, 0%, 100%, 0.88);
+/* src/index.css or a similar global CSS file */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body, html {
+  background-color: #222; /* Dark background color */
+  color: #fff; /* Text color */
+  height: 100%;
+}

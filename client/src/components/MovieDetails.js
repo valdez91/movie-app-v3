@@ -1,5 +1,8 @@
+// src/components/MovieDetails.js
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './MovieDetails.css'; // Import your CSS file for styling
 
 const MovieDetails = () => {
     const { movieId } = useParams();
@@ -38,10 +41,10 @@ const MovieDetails = () => {
     }
 
     return (
-        <div>
-            <h1>{movie.title}</h1>
-            <p>{movie.description}</p>
-            <img src={movie.poster_url} alt={movie.title} />
+        <div className="movie-details-container">
+            <h1 className="movie-title">{movie.title}</h1>
+            <p className="movie-description">{movie.description}</p>
+            <img src={movie.poster_url} alt={movie.title} className="movie-poster" />
         </div>
     );
 };

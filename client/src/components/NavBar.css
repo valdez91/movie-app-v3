@@ -1,13 +1,27 @@
 /* src/components/NavBar.css */
+
 nav {
     background-color: #333;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
 
 ul {
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem; /* Increase gap for more spacing */
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -17,4 +31,10 @@ li {
 a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #007bff; /* Change color on hover */
 }

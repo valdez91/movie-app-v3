@@ -28,6 +28,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
+    height: 100%; /* Ensure card fills its container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space evenly within the card */
 }
 
 .movie-card:hover {
@@ -38,6 +42,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    flex-grow: 1; /* Ensure image fills available space */
 }
 
 .movie-card h2 {

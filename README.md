@@ -1,6 +1,112 @@
-# Getting Started with Create React App
+# Mtandao Project Application
+This is a comprehensive movie project application built using Flask and SQLAlchemy for the backend, and React for the frontend. The application allows users to view movie details, post reviews, and manage their profile.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Overview
+
+The Movie Project Application consists of two main components:
+
+### Backend
+
+The backend is built with Flask and SQLAlchemy. It includes the following features:
+
+User authentication and profile management
+
+Movie database with genres, reviews, and ratings
+
+API endpoints for frontend integration
+
+### Frontend
+
+The frontend is developed using React. It features:
+
+User-friendly interface for browsing movies
+
+Review and rating system
+
+Profile page with favorite movies and recent reviews
+
+### Getting Started
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+Ensure you have the following installed:
+
+Python 3.x
+
+Node.js and npm
+
+Flask
+
+SQLAlchemy
+
+ React
+
+ ## Backend Setup
+
+1. Clone the repository:
+
+```
+git clone https://github.com/yourusername/movie-project.git
+cd movie-project/server
+
+```
+
+2. Create and activate a virtual environment:
+
+```
+python3 -m venv venv
+source venv/bin/activate
+
+```
+
+3.Install dependencies:
+
+```
+pip install -r requirements.txt
+
+```
+4.Set up the database:
+
+```
+flask db init
+flask db migrate
+flask db upgrade
+
+```
+5.Seed the database:
+
+```
+python seed.py
+
+```
+6.Run the backend server:
+
+```
+flask run
+
+```
+## Frontend Setup
+
+1.Navigate to the client directory:
+
+```
+cd ../client
+
+```
+
+2.Install dependencies:
+
+```
+npm install
+```
+3.Start the frontend development server:
+
+```
+npm start
+```
+
+Open http://localhost:3000 to view it in the browser
 
 ## Available Scripts
 

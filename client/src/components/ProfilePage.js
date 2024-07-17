@@ -3,6 +3,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
+import './ProfilePage.css'; // Import the separate CSS file for ProfilePage
 
 const ProfilePage = () => {
     const history = useHistory();
@@ -17,9 +18,11 @@ const ProfilePage = () => {
     };
 
     return (
-        <div>
-            <h1>Profile Page</h1>
-            <button onClick={handleLogout}>Log Out</button>
+        <div className="profile-container"> {/* Apply separate container style */}
+            <div className="profile-card"> {/* Apply separate card style */}
+                <h1>Profile Page</h1>
+                <button onClick={handleLogout}>Log Out</button>
+            </div>
         </div>
     );
 };

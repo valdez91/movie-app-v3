@@ -1,5 +1,6 @@
+// src/pages/HomePage.js
 import React from 'react';
-import './HomePage.css'; // Import your CSS file for styling
+import './HomePage.css';
 
 const HomePage = () => {
     // Fake contact information
@@ -11,7 +12,6 @@ const HomePage = () => {
 
     return (
         <div className="home-page">
-           
             <div className="cards-container">
                 <div className="card about-app">
                     <h2>About the Mtandao Movie Review App</h2>

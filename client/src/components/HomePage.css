@@ -1,9 +1,10 @@
-/* src/components/HomePage.css */
-
 body, html {
     margin: 0;
     padding: 0;
+    background: url('./WhatsApp\ Image\ 2024-07-17\ at\ 2.21.14\ PM.jpeg') no-repeat center center fixed; /* Replace with your actual image path */
+    background-size: cover;
     height: 100%;
+    color: #fff; /* Text color */
 }
 
 .home-page {
@@ -12,26 +13,21 @@ body, html {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    min-height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-    ), 
-    url('./WhatsApp\ Image\ 2024-07-17\ at\ 2.21.14\ PM.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
+    min-height: 100vh; /* Ensure full viewport height */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text visibility */
 }
 
 .home-title {
+    color: #f0f0f0; /* Slightly lighter text color */
     font-size: 36px;
     margin-bottom: 30px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1); /* Light white with transparency */
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -39,21 +35,22 @@ body, html {
     width: 80%;
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff;
+    color: #f0f0f0; /* Ensure card text color is lighter */
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Move card up slightly on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
 
 .card h2 {
+    color: #f0f0f0; /* Slightly lighter text color */
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 .card p {
-    color: #ccc;
+    color: #ddd; /* Slightly lighter text color */
     font-size: 16px;
     line-height: 1.6;
 }

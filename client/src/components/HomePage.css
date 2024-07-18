@@ -3,8 +3,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #222; /* Dark background color */
-    color: #fff; /* Text color */
     height: 100%;
 }
 
@@ -14,21 +12,26 @@ body, html {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    background-color: #222; /* Dark background color */
-    min-height: 100vh; /* Ensure full viewport height */
-    width: 100%; /* Ensure full width */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+    ), 
+    url('./WhatsApp\ Image\ 2024-07-17\ at\ 2.21.14\ PM.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
 .home-title {
-    color: #fff;
     font-size: 36px;
     margin-bottom: 30px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1); /* Light white with transparency */
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -36,16 +39,15 @@ body, html {
     width: 80%;
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff; /* Ensure card text color is white */
+    color: #fff;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Move card up slightly on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card h2 {
-    color: #fff;
     font-size: 24px;
     margin-bottom: 10px;
 }

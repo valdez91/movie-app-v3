@@ -1,85 +1,123 @@
 /* src/components/ReviewPage.css */
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fff; /* Font color */
+    background: url('./WhatsApp\ Image\ 2024-07-17\ at\ 2.21.14\ PM.jpeg') no-repeat center center fixed; /* Add background image */
+    background-size: cover; /* Ensure the background image covers the entire page */
+}
+
 .review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Ensure full viewport height */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    margin: 20px;
-    color: black; /* Set font color to black */
 }
 
 .review-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
 }
 
-.review-form input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    color: black; /* Set font color to black */
-}
-
-.review-form button {
+.review-form input, .review-form button {
     padding: 10px;
     border-radius: 8px;
     border: none;
-    background-color: #007BFF;
-    color: white;
     font-size: 16px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+}
+
+.review-form button {
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .review-form button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .review-item {
-    padding: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    color: black; /* Set font color to black */
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
 
 .review-item h2 {
-    margin: 0 0 5px 0;
-    font-size: 20px;
-    color: black; /* Set font color to black */
+    margin: 0 0 10px 0;
+    font-size: 24px; /* Increased font size for better visibility */
+    color: #ffdd57; /* Bright yellow color for rating text */
 }
 
 .review-item p {
     margin: 0;
-    color: black; /* Set font color to black */
+    color: #ddd;
 }
 
 .review-item button {
     margin-right: 10px;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 8px;
     border: none;
-    background-color: #dc3545;
-    color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .review-item button:hover {
-    background-color: #c82333;
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .review-item button.update {
     background-color: #ffc107;
-    color: black; /* Set font color to black */
+    color: #333;
 }
 
 .review-item button.update:hover {
     background-color: #e0a800;
+}
+
+.review-item button.delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.review-item button.delete:hover {
+    background-color: #c82333;
 }

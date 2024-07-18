@@ -78,7 +78,6 @@ const ReviewPage = () => {
 
     return (
         <div className="review-container">
-            <h1>Reviews</h1>
             <form className="review-form" onSubmit={handleSubmit}>
                 <input type="number" value={rating} onChange={(e) => setRating(e.target.value)} placeholder="Rating" required />
                 <input type="text" value={comment} onChange={(e) => setComment(e.target.value)} placeholder="Comment" required />
@@ -90,7 +89,7 @@ const ReviewPage = () => {
                         <h2>Rating: {review.rating}</h2>
                         <p>{review.comment}</p>
                         <button className="update" onClick={() => handleUpdate(review.id)}>Update Review</button>
-                        <button onClick={() => handleDelete(review.id)}>Delete Review</button>
+                        <button className="delete" onClick={() => handleDelete(review.id)}>Delete Review</button>
                     </div>
                 ))}
             </div>

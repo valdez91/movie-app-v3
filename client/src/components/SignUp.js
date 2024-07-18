@@ -1,7 +1,9 @@
+// src/components/SignUp.js
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
+import './SignUp.css';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -20,7 +22,7 @@ const SignUp = () => {
     };
 
     return (
-        <div className="auth-page">
+        <div className="signup-container">
             <form onSubmit={handleSubmit}>
                 <h1>Sign Up</h1>
                 <input
@@ -36,9 +38,9 @@ const SignUp = () => {
                     placeholder="Password"
                 />
                 <button type="submit">Sign Up</button>
-                {error && <p>{error}</p>}
+                {error && <p className="error">{error}</p>}
                 <p>
-                    Already have an account? <Link to="/login">Log In</Link>
+                    Already have an account? <Link to="/login">Login</Link>
                 </p>
             </form>
         </div>

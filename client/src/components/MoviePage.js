@@ -19,10 +19,10 @@ const MoviePage = () => {
             .catch(error => console.error('Error fetching movies:', error));
     }, []);
 
-    const toggleDescription = (index) => {
+    const toggleDescription = (movieId) => {
         // Create a new array with updated showDescription for the clicked movie
-        const updatedMovies = movies.map((movie, idx) => {
-            if (idx === index) {
+        const updatedMovies = movies.map((movie) => {
+            if (movie.id === movieId) {
                 return {
                     ...movie,
                     showDescription: !movie.showDescription
@@ -46,16 +46,15 @@ const MoviePage = () => {
 
     return (
         <div className="movie-page">
-            
             <div className="movie-grid">
                 {movieColumns.map((column, colIndex) => (
                     <div key={colIndex} className="movie-column">
-                        {column.map((movie, index) => (
+                        {column.map((movie) => (
                             <div key={movie.id} className="movie-card">
                                 <img src={movie.poster_url} alt={movie.title} className="movie-poster" />
                                 <h2>{movie.title}</h2>
                                 {movie.showDescription && <p>{movie.description}</p>}
-                                <button onClick={() => toggleDescription(index)}>
+                                <button onClick={() => toggleDescription(movie.id)}>
                                     {movie.showDescription ? 'Hide Description' : 'View Description'}
                                 </button>
                                 <Link to={`/movies/${movie.id}`}>View Poster</Link>
